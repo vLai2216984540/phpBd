@@ -331,6 +331,7 @@ class Main {
 
 	private static $socketClass;
 
+	//__construct 构造函数 
 	public function __construct () {
 		self::$htmlClass   = new HtmlOutput();
 		self::$loginClass  = new Login();
@@ -2148,7 +2149,9 @@ class Decrypt {
 	}
 }
 
+// ob_start这个函数是用来打开输出缓冲区的，这个函数必须在任何输出之前调用，否则不起作用。
 ob_start();
 $main_handler = new Main();
 $main_handler->mainLogin();
+// ob_end_flush这个函数是用来输出缓冲区的内容并关闭缓冲区的，这个函数必须在所有输出之后调用，否则不起作用。
 ob_end_flush();
