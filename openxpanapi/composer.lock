@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad6466a23403b753cd7b1fe8e9127e4b",
+    "content-hash": "2b21a5426f18af413aa3e65cf69c1dfd",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -446,7 +446,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-php72/v1.27.0/symfony-polyfill-php72-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-php72/v1.27.0/symfony-polyfill-php72-v1.27.0.zip",
                 "reference": "869329b1e9894268a8a61dabb69153029b7a8c97",
                 "shasum": ""
             },
@@ -502,7 +502,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4",
+        "php": "^7.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*"

@@ -235,7 +235,7 @@ function userinfo()
 {
     MyApiQuota();
 
-    MyXpannasuinfo();
+    // MyXpannasuinfo();
 }
 
 function MyApiQuota()
@@ -254,9 +254,13 @@ function MyApiQuota()
 
     try {
         $result = $apiInstance->apiquota($access_token, $checkexpire, $checkfree);
-        print_r($result);
+        // echo $result;
+        // echo gettype($result);
+        // echo $result['total'];
+        return $result;
     } catch (Exception $e) {
         echo 'Exception when calling UserinfoApi->apiquota: ', $e->getMessage(), PHP_EOL;
+        return null;
     }
 }
 
@@ -538,7 +542,7 @@ function MyFilemanagerdelete()
 
 // filemeta();
 
-userinfo();
+// userinfo();
 
 // multimediafile();
 

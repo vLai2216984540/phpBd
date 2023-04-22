@@ -114,7 +114,7 @@ EOF;
 	}
 
 	public function htmlLogin () {
-		self::htmlOut("<html lang='en'><head><title>后台管理系统</title>");
+		self::htmlOut("<html lang='en'><head><title>登陆界面</title>");
 		self::loginCss();
 		self::htmlOut("</head><body><div class=\"page-container\"><h1>后台管理登陆</h1><form method=\"post\"><input type=\"text\" name=\"username\" class=\"username\" placeholder=\"用户名\"><input type=\"password\" name=\"password\" class=\"password\" placeholder=\"密码\"><button type=\"submit\">登录</button></form></div></body>");
 	}
