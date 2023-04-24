@@ -1,0 +1,21 @@
+.userdiv {
+  /* 水平居中 */
+  text-align: left;
+  /* 垂直居中 */
+  vertical-align: middle;
+  /* 使div的宽度和高度自适应 */
+  width: auto;
+  height: auto;
+  /* 设置div的背景颜色 */
+  background-color: #f0f0f0;
+  /* 设置div的边框 */
+  border: 1px solid #000000;
+  /* 设置div的圆角 */
+  border-radius: 10px;
+  /* 设置div的内边距 */
+  padding: 10px;
+  /* 设置div的外边距 */
+  margin: 10px;
+  /* 设置div的阴影 */
+  box-shadow: 5px 5px 5px #888888;
+}

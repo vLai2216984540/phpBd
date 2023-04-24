@@ -224,9 +224,11 @@ function MyXpanfilelist()
 
     try {
         $result = $apiInstance->xpanfilelist($access_token, $dir, $folder, $start, $limit, $order, $desc, $web, $showempty);
-        print_r($result);
+        // print_r($result);
+        return $result;
     } catch (Exception $e) {
         echo 'Exception when calling FileinfoApi->xpanfilelist: ', $e->getMessage(), PHP_EOL;
+        return null;
     }
 }
 
@@ -254,9 +256,6 @@ function MyApiQuota()
 
     try {
         $result = $apiInstance->apiquota($access_token, $checkexpire, $checkfree);
-        // echo $result;
-        // echo gettype($result);
-        // echo $result['total'];
         return $result;
     } catch (Exception $e) {
         echo 'Exception when calling UserinfoApi->apiquota: ', $e->getMessage(), PHP_EOL;
@@ -278,9 +277,10 @@ function MyXpannasuinfo()
 
     try {
         $result = $apiInstance->xpannasuinfo($access_token);
-        print_r($result);
+        return ($result);
     } catch (Exception $e) {
         echo 'Exception when calling UserinfoApi->xpannasuinfo: ', $e->getMessage(), PHP_EOL;
+        return null;
     }
 }
 
