@@ -16,6 +16,8 @@ function getFileLists(){
     $myFileLists[$i]['size'] = $panFileList['size'];
     // 文件修改时间
     $myFileLists[$i]['server_mtime'] = $panFileList['server_mtime'];
+    // 路径
+    $myFileLists[$i]['path'] = $panFileList['path'];
     $i++;
   }
   // var_export($myFileLists);

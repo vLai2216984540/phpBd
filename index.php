@@ -1,8 +1,5 @@
 <?php
-
-// // 导入功能和类
-// // require_once  语句用于在脚本执行期间包含并运行指定文件。
-
+// 导入功能和类
 require_once './openxpanapi/demo/XpanMain.php';
 ?>
 
@@ -10,6 +7,7 @@ require_once './openxpanapi/demo/XpanMain.php';
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="./css/userinfo.css" rel="stylesheet" style="text/css"/>
+    <link href="./css/file.css" rel="stylesheet" style="text/css"/>
   </head>
   <body>
     <div class="userdiv">
@@ -28,14 +26,22 @@ require_once './openxpanapi/demo/XpanMain.php';
       <br>
     </div>
     <?php
-      include './templates/file.php';
-      $fileLists = getFileLists();
-      foreach ($fileLists as $fileList) {
-        echo $fileList['server_filename'] . " ";
-        echo $fileList['size'] . " ";
-        echo $fileList['server_mtime'];
-        echo "<br>";
-      }
+        include './templates/file.php';
+        $fileLists = getFileLists();
+        echo "<div id='list-container'>";
+        foreach ($fileLists as $fileList) {
+            echo "<ul id='list' class='grid'>";
+                echo "<div class='item'>";
+                echo "<icon src='ccc'>";
+                echo "<a>$fileList[server_filename]</a>";
+                echo "<a>$fileList[size]</a>";
+                $date = date("Y-m-d H:i:s", $fileList['server_mtime']);
+                echo "<a>$date</a>";
+                echo "</div>";
+            echo "</ul>";
+        }
+        echo "</div>";
     ?>
+
   <body>
 </html>
