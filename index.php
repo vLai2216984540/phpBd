@@ -28,17 +28,19 @@ require_once './openxpanapi/demo/XpanMain.php';
     <?php
         include './templates/file.php';
         $fileLists = getFileLists();
-        echo "<div id='list-container'>";
+        echo "<div class='list-container'>";
+        echo "<div class='tab'>";
+        echo "<a>名称</a>";
+        echo "<a>大小</a>";
+        echo "<a>修改日期</a>";
+        echo "</div>";
         foreach ($fileLists as $fileList) {
-            echo "<ul id='list' class='grid'>";
-                echo "<div class='item'>";
-                echo "<icon src='ccc'>";
-                echo "<a>$fileList[server_filename]</a>";
-                echo "<a>$fileList[size]</a>";
-                $date = date("Y-m-d H:i:s", $fileList['server_mtime']);
-                echo "<a>$date</a>";
+                echo "<div class='tab item'>";
+                    echo "<a>$fileList[server_filename]</a>";
+                    echo "<a>$fileList[size]</a>";
+                    $date = date("Y-m-d H:i:s", $fileList['server_mtime']);
+                    echo "<a>$date</a>";
                 echo "</div>";
-            echo "</ul>";
         }
         echo "</div>";
     ?>
