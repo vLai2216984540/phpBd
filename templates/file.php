@@ -18,6 +18,7 @@ function getFileLists(){
     $myFileLists[$i]['server_mtime'] = $panFileList['server_mtime'];
     // 路径
     $myFileLists[$i]['path'] = $panFileList['path'];
+    echo $myFileLists[$i]['path'], PHP_EOL;
     $i++;
   }
   // var_export($myFileLists);
