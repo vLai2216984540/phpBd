@@ -37,18 +37,11 @@
   flex-direction: row;
   margin-left: 2px;
   margin-right: 2px;
+  align-items: center;
+  color: black;
+  text-decoration: none;
 }
 
-.item a:nth-child(1) {
-  margin-right: auto;
-}
-.item a:nth-child(2) {
-  margin-right: 10%;
-}
-.item a:last-child {
-  margin-right: 0%;
-}
-/* 当鼠标悬停在列表项上时，将其放大并添加投影 */
 .item:hover {
   background-color: #e0dede;
   transform: scale(1.02);
@@ -63,4 +56,24 @@
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  /* justify-content: space-between; */
+}
+
+.right-container {
+  display: flex;
+}
+
+.right-container p:nth-child(1) {
+  margin-right: 160px;
+  /* text-align: right; */
+}
+.right-container p:last-child {
+  margin-right: 0%;
+  /* text-align: right; */
 }

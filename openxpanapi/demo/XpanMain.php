@@ -202,7 +202,7 @@ function MyXpanfilesearch()
 
 }
 
-function MyXpanfilelist()
+function MyXpanfilelist($path)
 {
     global $MyAccessToken;
     $access_token = $MyAccessToken;
@@ -211,7 +211,7 @@ function MyXpanfilelist()
     $web = "web";      // string |  (optional)
     $start = "0";      // string |  (optional)
     $limit = 2;      // int |  (optional)
-    $dir = "/";      // string |  (optional)
+    $dir = "/".$path;      // string |  (optional)
     $order = "time";      // string |  (optional)
     $desc = 1;      // int |  (optional)
     $showempty = 0;      // int |  (optional)
@@ -315,15 +315,15 @@ function MyXpanmultimediafilemetas()
     }
 }
 
-function MyXpanfilelistall()
+function MyXpanfilelistall($mypath)
 {
     global $MyAccessToken;
     $access_token = $MyAccessToken;
-    $path = "/";   // string
+    $path = $mypath;   // string
     $web = "1";   // string |  (optional)
     $start = 0;   // int |  (optional)
-    $limit = 5;   // int |  (optional)
-    $recursion = 1;   // int | (optional)
+    $limit = 100;   // int |  (optional)
+    $recursion = 0;   // int | (optional)
 
     $order = "";// string |  (optional)
     $desc = 0; // int | (optional)
@@ -337,8 +337,10 @@ function MyXpanfilelistall()
     try {
         $result = $apiInstance->xpanfilelistall($access_token, $path, $recursion, $web, $start, $limit, $order, $desc);
         print_r($result);
+        return $result;
     } catch (Exception $e) {
         echo 'Exception when calling MultimediafileApi->xpanfilelistall: ', $e->getMessage(), PHP_EOL;
+        return null;
     }
 }
 
